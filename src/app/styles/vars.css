@@ -1,0 +1,47 @@
+body[data-theme="dark"] {
+  --color-font-name: #e7e8ea;
+  --color-active-name: #ffffff;
+  --color-bg-main: #19191A;
+  --color-bg-header: #232324;
+
+  /* folder */
+  --bg-hover-folder: rgba(255, 255, 255, 0.04);
+  --bg-active-folder: rgba(255, 255, 255, 0.08);
+  --color-border-folder: rgba(0, 16, 61, 0.12);
+  --bg-stick-folder: rgba(255, 255, 255, 0.16);
+
+  /* letter */
+  --color-font-text-letter: #8C8E94;
+  --bg-dot-letter: rgba(255, 255, 255, 0.12);
+  --bg-accent-active:#3C82FD;
+  --bg-accent: #9C9DA2;
+}
+
+body[data-theme="light"] {
+  --color-font-name: #333333;
+  --color-font-text: #2c2d2e;
+  --color-bg-main: #F6F7F8;
+  --color-bg-header: #FFFFFF;
+
+  /* folder */
+  --bg-hover-folder: rgba(0, 16, 61, 0.04);
+  --bg-active-folder: rgba(0, 16, 61, 0.08);
+  --color-border-folder: rgba(0, 16, 61, 0.12);
+
+  /* letter */
+  --color-font-text-letter: #87898F;
+  --bg-dot-letter: rgba(0, 16, 61, 0.06);
+  --bg-accent-active:#005FF9;
+  --bg-accent: #A5A7AD;
+  
+}
+
+/* 
+--color-primary: #005FF9;
+--color-body-bg: #C9C9C9;
+--color-nav-bg: #FFFFFF;
+--color-active-message: rgba(0, 16, 61, 0.04);
+--color-active-page: rgba(0, 16, 61, 0.08);
+--color-border: rgba(0, 16, 61, 0.12);
+--color-font-menu: #333333;
+--color-font-message: #333333; */
