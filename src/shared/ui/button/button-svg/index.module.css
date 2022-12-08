@@ -1,0 +1,27 @@
+.button {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--color-font-name);
+}
+
+.svg { 
+  margin-right: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .button {
+    display: none;
+  }
+}
