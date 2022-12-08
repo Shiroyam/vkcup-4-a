@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { Folder } from "../shared/ui/folder";
+import { Mail } from "../shared/ui/icon";
 import { Nav } from "../widgets/nav";
 import "./styles/index.css";
 
@@ -11,7 +13,7 @@ function App() {
     document.body.setAttribute("data-theme", theme);
   }, [theme]);
 
-  return <Nav />;
+  return <Folder svg={<Mail />} text="Входящие" />;
 }
 
 export default App;
