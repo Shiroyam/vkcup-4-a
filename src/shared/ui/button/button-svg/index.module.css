@@ -13,11 +13,11 @@
   font-weight: 400;
   font-size: 15px;
   line-height: 20px;
-  color: var(--color-font-name);
+  color: var(--color-newtext);
 }
 
 .svg { 
-  margin-right: 15px;
+  margin-right: 20px;
 }
 
 @media screen and (max-width: 768px) {

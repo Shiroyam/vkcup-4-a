@@ -3,12 +3,14 @@ body[data-theme="dark"] {
   --color-active-name: #ffffff;
   --color-bg-main: #19191A;
   --color-bg-header: #232324;
+  --color-text-button: #333333;
 
   /* folder */
   --bg-hover-folder: rgba(255, 255, 255, 0.04);
   --bg-active-folder: rgba(255, 255, 255, 0.08);
   --color-border-folder: rgba(0, 0, 0, 0.4);
   --bg-stick-folder: rgba(255, 255, 255, 0.16);
+  --color-newtext: #E7E8EA;
 
   /* letter */
   --color-font-text-letter: #8C8E94;
@@ -22,11 +24,14 @@ body[data-theme="light"] {
   --color-font-text: #2c2d2e;
   --color-bg-main: #F6F7F8;
   --color-bg-header: #FFFFFF;
+  --color-text-button: #333333;
 
   /* folder */
   --bg-hover-folder: rgba(0, 16, 61, 0.04);
   --bg-active-folder: rgba(0, 16, 61, 0.08);
   --color-border-folder: rgba(0, 16, 61, 0.12);
+  --bg-stick-folder: rgba(0, 16, 61, 0.12);
+  --color-newtext: #333333;
 
   /* letter */
   --color-font-text-letter: #87898F;

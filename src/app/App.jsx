@@ -1,17 +1,14 @@
-import { useEffect, useState } from "react";
 import { Header } from "../widgets/header";
+import { Sidebar } from "../widgets/sidebar";
 import "./styles/index.css";
 
 function App() {
-  const [theme, setTheme] = useState("light");
-
-  const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
-
-  useEffect(() => {
-    document.body.setAttribute("data-theme", theme);
-  }, [theme]);
-
-  return <Header />;
+  return (
+    <>
+      <Header />
+      <Sidebar />
+    </>
+  );
 }
 
 export default App;

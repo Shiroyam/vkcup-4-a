@@ -1,0 +1,25 @@
+.theme {
+  display: flex;
+  cursor: pointer;
+}
+
+.svg {
+  fill: var(--color-font-name);
+  stroke: var(--color-font-name);
+}
+
+.text {
+  color: var(--color-font-name);
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .text {
+    display: none;
+  }
+}

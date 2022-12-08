@@ -1,5 +1,11 @@
 export { default as logoText } from "./logo-text.svg";
 export { default as logo } from "./logo.svg";
-export { default as pen } from "./pen.svg";
+export { ReactComponent as Pen } from "./pen.svg";
 export { ReactComponent as Plus } from "./plus.svg";
 export { ReactComponent as Mail } from "./mail.svg";
+export { ReactComponent as Archive } from "./archive.svg";
+export { ReactComponent as Draft } from "./draft.svg";
+export { ReactComponent as Important } from "./important.svg";
+export { ReactComponent as Send } from "./send.svg";
+export { ReactComponent as Spam } from "./spam.svg";
+export { ReactComponent as Trash } from "./trash.svg";

@@ -1,0 +1,46 @@
+.sidebar {
+  width: 232px;
+  height: calc(100vh - 56px);
+  padding: 12px 16px 0 16px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.buttonBorder {
+  margin-bottom: 12px;
+}
+
+.buttonSvg {
+  margin-left: 5px;
+}
+
+.stick {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  height: 1px;
+  background: var(--bg-stick-folder);
+}
+
+.svg {
+  fill: var(--color-font-name);
+}
+
+.plus {
+  fill: var(--color-newtext);
+}
+
+.pen {
+  fill: var(--color-text-button);
+}
+
+.theme {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .stick {
+    display: none;
+  }
+}
