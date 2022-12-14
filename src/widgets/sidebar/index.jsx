@@ -11,7 +11,7 @@ import {
   Send,
   Spam,
   Trash,
-} from "../../shared/ui/icon";
+} from "../../shared/icon";
 import styles from "./index.module.css";
 
 export const Sidebar = () => {

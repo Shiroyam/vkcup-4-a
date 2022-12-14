@@ -1,6 +1,6 @@
 import styles from "./index.module.css";
-import { logoText } from "../../shared/ui/icon";
-import { logo } from "../../shared/ui/icon";
+import { logoText } from "../../shared/icon";
+import { logo } from "../../shared/icon";
 
 export const Header = () => {
   return (
