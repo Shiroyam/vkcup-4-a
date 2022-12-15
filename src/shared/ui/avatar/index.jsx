@@ -1,7 +1,10 @@
 import styles from "./index.module.css";
 
-export const Avatar = (img) => {
+export const Avatar = ({ img }) => {
   return (
-    <div style={{ background: `url(${img})` }} className={styles.avatar}></div>
+    <div
+      style={{ backgroundImage: `url(${img})` }}
+      className={styles.avatar}
+    ></div>
   );
 };

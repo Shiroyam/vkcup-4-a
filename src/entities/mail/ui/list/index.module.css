@@ -1,0 +1,108 @@
+.letter {
+  width: 1676px;
+  height: 48px;
+  background-color: var(--bg-color-letter);
+  display: flex;
+  align-items: center;
+  padding-right: 12px;
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+}
+
+.letter:hover {
+  background-color: var(--bg-hover-letter);
+}
+
+.accent {
+  position: absolute;
+  margin-left: 13px;
+}
+
+.avatar {
+  margin-left: 28px;
+}
+
+.note {
+  position: absolute;
+  left: 234px;
+}
+
+.author {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--color-font-title-letter);
+  max-width: 140px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; 
+  position: absolute;
+  left: 72px;
+}
+
+.title {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--color-font-title-letter);
+  margin-left: 216px;
+  margin-right: 8px;
+  max-width: 252px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; 
+}
+
+.text {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--color-font-text-letter);
+  max-width: 1008px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; 
+}
+
+.categorie {
+  position: absolute;
+  right: 72px;
+}
+
+.date {
+  position: absolute;
+  right: 14px;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--color-font-text-letter);
+}
+
+@media screen and (max-width: 1366px){
+  .letter{
+    width: 1122px;
+  }
+
+  .text{
+    max-width: 454px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .letter{
+    width: 691px;
+  }
+
+  .text{
+    max-width: 60px;
+  }
+}
