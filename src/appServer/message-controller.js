@@ -7,71 +7,85 @@ export const getMail = (req, res) => {
 };
 
 export const getIncoming = (req, res) => {
-  return res.end(
-    JSON.stringify(
-      db.filter((element) => {
-        return element.folder === undefined;
-      })
-    )
-  );
+  const resultDb = db.filter((element) => {
+    return element.folder === undefined;
+  });
+
+  if ("id" in req.params) {
+    return res.end(JSON.stringify(resultDb[req.params.id]));
+  } else {
+    return res.end(JSON.stringify(resultDb));
+  }
 };
 
 export const getArchive = (req, res) => {
-  return res.end(
-    JSON.stringify(
-      db.filter((element) => {
-        return element.folder === "Архив";
-      })
-    )
-  );
+  const resultDb = db.filter((element) => {
+    return element.folder === "Архив";
+  });
+
+  if ("id" in req.params) {
+    return res.end(JSON.stringify(resultDb[req.params.id]));
+  } else {
+    return res.end(JSON.stringify(resultDb));
+  }
 };
 
 export const getImportant = (req, res) => {
-  return res.end(
-    JSON.stringify(
-      db.filter((element) => {
-        return element.folder === "Важное";
-      })
-    )
-  );
+  const resultDb = db.filter((element) => {
+    return element.folder === "Важное";
+  });
+
+  if ("id" in req.params) {
+    return res.end(JSON.stringify(resultDb[req.params.id]));
+  } else {
+    return res.end(JSON.stringify(resultDb));
+  }
 };
 
 export const getSpam = (req, res) => {
-  return res.end(
-    JSON.stringify(
-      db.filter((element) => {
-        return element.folder === "Спам";
-      })
-    )
-  );
+  const resultDb = db.filter((element) => {
+    return element.folder === "Спам";
+  });
+
+  if ("id" in req.params) {
+    return res.end(JSON.stringify(resultDb[req.params.id]));
+  } else {
+    return res.end(JSON.stringify(resultDb));
+  }
 };
 
 export const getTrash = (req, res) => {
-  return res.end(
-    JSON.stringify(
-      db.filter((element) => {
-        return element.folder === "Корзина";
-      })
-    )
-  );
+  const resultDb = db.filter((element) => {
+    return element.folder === "Корзина";
+  });
+
+  if ("id" in req.params) {
+    return res.end(JSON.stringify(resultDb[req.params.id]));
+  } else {
+    return res.end(JSON.stringify(resultDb));
+  }
 };
 
 export const getSend = (req, res) => {
-  return res.end(
-    JSON.stringify(
-      db.filter((element) => {
-        return element.folder === "Отправленные";
-      })
-    )
-  );
+  const resultDb = db.filter((element) => {
+    return element.folder === "Отправленные";
+  });
+
+  if ("id" in req.params) {
+    return res.end(JSON.stringify(resultDb[req.params.id]));
+  } else {
+    return res.end(JSON.stringify(resultDb));
+  }
 };
 
 export const getDraft = (req, res) => {
-  return res.end(
-    JSON.stringify(
-      db.filter((element) => {
-        return element.folder === "Черновики";
-      })
-    )
-  );
+  const resultDb = db.filter((element) => {
+    return element.folder === "Черновики";
+  });
+
+  if ("id" in req.params) {
+    return res.end(JSON.stringify(resultDb[req.params.id]));
+  } else {
+    return res.end(JSON.stringify(resultDb));
+  }
 };
