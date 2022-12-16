@@ -1,3 +1,8 @@
+.active {
+  background-color: var(--bg-active-folder);
+  font-weight: 700;
+}
+
 .folder {
   width: 200px;
   height: 36px;
@@ -26,9 +31,6 @@
   font-weight: 700;
 }
 
-.folder:hover {
-  background-color: var(--bg-hover-folder);
-}
 
 @media screen and (max-width: 768px) {
   .folder {

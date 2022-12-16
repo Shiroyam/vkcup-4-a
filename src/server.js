@@ -18,7 +18,7 @@ const server = http.createServer((req, res) => {
     return res.end(JSON.stringify(db));
   }
 
-  if (req.url === "/incoming") {
+  if (req.url === "/") {
     return res.end(
       JSON.stringify(
         db.filter((element) => {

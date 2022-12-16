@@ -1,0 +1,21 @@
+.folderPage {
+  display: grid;
+  grid-template-areas: "header header"
+                       "sidebar main";
+}
+
+.header {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.main {
+  grid-area: main;
+  background-color: var(--bg-color-letter);
+  width: 1676px;
+  border-radius: 12px;
+  margin: 12px 12px 20px 0;
+}
