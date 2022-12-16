@@ -1,92 +1,23 @@
-import http from "http";
-import { readFile } from "fs/promises";
-
-const db = JSON.parse(await readFile(new URL("./db.json", import.meta.url)));
+import { Application } from "./appServer/Application.js";
+import { router } from "./appServer/message-router.js";
+import { parserJson } from "./appServer/parserJson.js";
+import { parserUrl } from "./appServer/parserUrl.js";
 
 const PORT = 3000;
 
-const server = http.createServer((req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
+const app = new Application();
 
-  res.setHeader("Access-Control-Allow-Headers", "origin, content-type, accept");
+app.use(parserJson);
+app.use(parserUrl("http://localhost:3000"));
 
-  res.writeHead(200, {
-    "Content-Type": "application/json",
-  });
+app.addRouter(router);
 
-  if (req.url === "/mail") {
-    return res.end(JSON.stringify(db));
+const start = async () => {
+  try {
+    app.listen(PORT, () => console.log(`Server started on PORT ${PORT}`));
+  } catch (e) {
+    console.log(e);
   }
+};
 
-  if (req.url === "/") {
-    return res.end(
-      JSON.stringify(
-        db.filter((element) => {
-          return element.folder === undefined;
-        })
-      )
-    );
-  }
-
-  if (req.url === "/archive") {
-    return res.end(
-      JSON.stringify(
-        db.filter((element) => {
-          return element.folder === "Архив";
-        })
-      )
-    );
-  }
-
-  if (req.url === "/important") {
-    return res.end(
-      JSON.stringify(
-        db.filter((element) => {
-          return element.folder === "Важное";
-        })
-      )
-    );
-  }
-
-  if (req.url === "/spam") {
-    return res.end(
-      JSON.stringify(
-        db.filter((element) => {
-          return element.folder === "Спам";
-        })
-      )
-    );
-  }
-
-  if (req.url === "/trash") {
-    return res.end(
-      JSON.stringify(
-        db.filter((element) => {
-          return element.folder === "Корзина";
-        })
-      )
-    );
-  }
-
-  if (req.url === "/send") {
-    return res.end(
-      JSON.stringify(
-        db.filter((element) => {
-          return element.folder === "Отправленные";
-        })
-      )
-    );
-  }
-
-  if (req.url === "/draft") {
-    return res.end(
-      JSON.stringify(
-        db.filter((element) => {
-          return element.folder === "Черновики";
-        })
-      )
-    );
-  }
-});
-
-server.listen(PORT, () => console.log(`Server started on PORT ${PORT}`));
+start();
