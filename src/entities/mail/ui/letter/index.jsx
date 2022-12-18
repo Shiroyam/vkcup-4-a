@@ -58,7 +58,7 @@ export const Letter = ({ data }) => {
         {data.doc ? (
           <div
             className={styles.img}
-            style={{ backgroundImage: `url(${data.doc.img})` }}
+            style={{ backgroundImage: `url(${data.doc.img})`, backgroundSize: "256px 190px" }}
           />
         ) : null}
       </div>

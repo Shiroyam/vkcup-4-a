@@ -17,3 +17,4 @@ export { ReactComponent as Ticket } from "./ticket.svg";
 export { ReactComponent as Fine } from "./fine.svg";
 export { ReactComponent as Bookmark } from "./bookmark.svg";
 export { ReactComponent as Exclamatory } from "./exclamatory.svg";
+export { ReactComponent as Doc } from "./doc.svg";

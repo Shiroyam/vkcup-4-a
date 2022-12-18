@@ -72,11 +72,6 @@
   white-space: nowrap;
 }
 
-.categorie {
-  position: absolute;
-  right: 72px;
-}
-
 .date {
   position: absolute;
   right: 14px;
@@ -86,6 +81,18 @@
   font-size: 13px;
   line-height: 20px;
   color: var(--color-font-text-letter);
+}
+
+.svgs {
+  position: absolute;
+  right: 80px;
+  display: flex;
+  z-index: 1;
+}
+
+.svg {
+  margin-left: 5px;
+  fill: var(--color-font-name);
 }
 
 @media screen and (max-width: 1366px) {
