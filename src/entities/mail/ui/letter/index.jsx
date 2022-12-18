@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 export const Letter = ({ data }) => {
   const [flagLength, setFlagLength] = useState(false);
-
+  console.log(data)
   useEffect(() => {
     setFlagLength(data.to ? (data.to.length > 3 ? true : false) : null);
   }, [data]);
@@ -22,7 +22,7 @@ export const Letter = ({ data }) => {
       </div>
       <div className={styles.profile}>
         <div className={styles.avatar}>
-          <Avatar />
+          <Avatar img={data?.author?.avatar}/>
         </div>
         <div
           className={styles.name}
