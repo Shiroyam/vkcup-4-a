@@ -30,7 +30,7 @@
 }
 
 .author {
-  font-family: 'Arial';
+  font-family: "Arial";
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -39,13 +39,13 @@
   max-width: 140px;
   text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap; 
+  white-space: nowrap;
   position: absolute;
   left: 72px;
 }
 
 .title {
-  font-family: 'Arial';
+  font-family: "Arial";
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -56,11 +56,11 @@
   max-width: 252px;
   text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap; 
+  white-space: nowrap;
 }
 
 .text {
-  font-family: 'Arial';
+  font-family: "Arial";
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -69,7 +69,7 @@
   max-width: 1008px;
   text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap; 
+  white-space: nowrap;
 }
 
 .categorie {
@@ -80,7 +80,7 @@
 .date {
   position: absolute;
   right: 14px;
-  font-family: 'Arial';
+  font-family: "Arial";
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -88,22 +88,22 @@
   color: var(--color-font-text-letter);
 }
 
-@media screen and (max-width: 1366px){
-  .letter{
+@media screen and (max-width: 1366px) {
+  .letter {
     width: 1122px;
   }
 
-  .text{
+  .text {
     max-width: 454px;
   }
 }
 
-@media screen and (max-width: 768px){
-  .letter{
+@media screen and (max-width: 768px) {
+  .letter {
     width: 691px;
   }
 
-  .text{
+  .text {
     max-width: 60px;
   }
 }

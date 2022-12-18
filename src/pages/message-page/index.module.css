@@ -1,7 +1,9 @@
 .messagePage {
   display: grid;
-  grid-template-areas: "header header"
-                       "sidebar main";
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "sidebar .";
 }
 
 .header {
@@ -16,9 +18,9 @@
   grid-area: main;
   background-color: var(--bg-color-letter);
   width: 1676px;
-  height: auto;
   border-radius: 12px;
   box-sizing: border-box;
   margin: 12px 12px 20px 0;
   padding: 16px 36px 32px 32px;
+  position: relative;
 }

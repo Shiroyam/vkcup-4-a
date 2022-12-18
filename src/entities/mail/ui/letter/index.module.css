@@ -6,7 +6,7 @@
 
 .title {
   color: var(--color-font-title-letter);
-  font-family: 'Arial';
+  font-family: "Arial";
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -21,8 +21,9 @@
   width: 700px;
   box-sizing: border-box;
   grid-template-columns: 32px auto auto 400px;
-  grid-template-areas: "avatar name date notes"
-                       "avatar to to to";
+  grid-template-areas:
+    "avatar name date notes . . ."
+    "avatar to to to to to to";
   gap: 8px;
 }
 
@@ -34,7 +35,7 @@
 .name {
   color: var(--color-font-title-letter);
   grid-area: name;
-  font-family: 'Arial';
+  font-family: "Arial";
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -44,7 +45,7 @@
 .date {
   color: var(--color-font-text-letter);
   grid-area: date;
-  font-family: 'Arial';
+  font-family: "Arial";
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -58,9 +59,16 @@
 }
 
 .to {
+  display: flex;
+  align-items: end;
+  grid-area: to;
+}
+
+.more {
+  text-decoration: underline;
   color: var(--color-font-text-letter);
   grid-area: to;
-  font-family: 'Arial';
+  font-family: "Arial";
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -68,12 +76,56 @@
 }
 
 .text {
+  margin-top: 38px;
   color: var(--color-font-title-letter);
-  font-family: 'Helvetica Neue';
+  font-family: "Helvetica Neue";
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
   line-height: 20px;
   max-width: 1612px;
   word-wrap: break-word;
+}
+
+.img {
+  margin-top: 20px;
+  width: 256px;
+  height: 190px;
+  border-radius: 12px;
+}
+
+.toElement::after {
+  content: ",";
+  margin-right: 5px;
+}
+
+.toElement:last-child::after {
+  center: "";
+  margin-right: 0px;
+}
+
+.who {
+  margin-right: 3px;
+}
+
+.accent {
+  position: absolute;
+  top: 72px;
+  left: 10px;
+}
+
+.categorie {
+  position: absolute;
+  align-items: center;
+  display: flex;
+  right: 90px;
+}
+
+.textCategorie {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  margin-left: 10px;
 }

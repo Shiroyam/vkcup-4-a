@@ -7,8 +7,22 @@ const MessagePage = lazy(() => import("./message-page"));
 export const Routing = () => {
   return (
     <Routes>
-      <Route path="/" element={<FolderPage />} />
-      <Route path="/:name" element={<FolderPage />} />
+      <Route
+        path="/"
+        element={
+          <Suspense>
+            <FolderPage />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/:name"
+        element={
+          <Suspense>
+            <FolderPage />
+          </Suspense>
+        }
+      />
       <Route
         path="/:name/:id"
         element={

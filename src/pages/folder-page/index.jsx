@@ -33,7 +33,7 @@ const FolderPage = () => {
           <Link
             to={`/${name}/${index}`}
             key={index}
-            styles={{ textDecoration: "none" }}
+            style={{ textDecoration: "none" }}
           >
             <ListLetter data={element} />
           </Link>

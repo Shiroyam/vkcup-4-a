@@ -7,10 +7,10 @@ import styles from "./index.module.css";
 
 const MessagePage = () => {
   const [message, setMessage] = useState([]);
-  const { name , id } = useParams();
-  console.log(message)
+  const { name, id } = useParams();
 
   const FetchingData = async () => {
+    console.log(`http://localhost:3000/${name}?id=${id}`);
     const response = await fetch(`http://localhost:3000/${name}?id=${id}`);
     const data = await response.json();
     setMessage(data);
@@ -18,7 +18,7 @@ const MessagePage = () => {
 
   useEffect(() => {
     FetchingData();
-  }, [id]);
+  }, [id, name]);
 
   return (
     <div className={styles.messagePage}>

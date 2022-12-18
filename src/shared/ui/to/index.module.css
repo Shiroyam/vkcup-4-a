@@ -1,0 +1,14 @@
+.to {
+  color: var(--color-font-text-letter);
+  grid-area: to;
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.to::after {
+  content: ",";
+  margin-right: 5px;
+}

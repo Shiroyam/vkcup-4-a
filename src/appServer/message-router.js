@@ -27,3 +27,5 @@ router.get("/important", getImportant);
 router.get("/spam", getSpam);
 
 router.get("/trash", getTrash);
+
+router.get("/undefined", getIncoming)
