@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { ListLetter } from "../../entities/mail/ui/list";
 import { Header } from "../../widgets/header";
 import { Sidebar } from "../../widgets/sidebar";
@@ -8,7 +8,7 @@ import styles from "./index.module.css";
 const FolderPage = () => {
   const [mail, setMail] = useState([]);
   const { name } = useParams();
-  const param = name === undefined ? '' : name;
+  const param = name === undefined ? "" : name;
 
   const FetchingData = async () => {
     const response = await fetch(`http://localhost:3000/${param}`);
@@ -30,7 +30,13 @@ const FolderPage = () => {
       </div>
       <main className={styles.main}>
         {mail.map((element, index) => (
-          <ListLetter key={index} data={element} />
+          <Link
+            to={`/${name}/${index}`}
+            key={index}
+            styles={{ textDecoration: "none" }}
+          >
+            <ListLetter data={element} />
+          </Link>
         ))}
       </main>
     </div>

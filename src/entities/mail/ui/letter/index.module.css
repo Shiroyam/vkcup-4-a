@@ -1,0 +1,79 @@
+.letter {
+  width: 1620px;
+  background-color: var(--bg-color-letter);
+  box-sizing: border-box;
+}
+
+.title {
+  color: var(--color-font-title-letter);
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.profile {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: grid;
+  height: 58px;
+  width: 700px;
+  box-sizing: border-box;
+  grid-template-columns: 32px auto auto 400px;
+  grid-template-areas: "avatar name date notes"
+                       "avatar to to to";
+  gap: 8px;
+}
+
+.avatar {
+  grid-area: avatar;
+  align-self: center;
+}
+
+.name {
+  color: var(--color-font-title-letter);
+  grid-area: name;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.date {
+  color: var(--color-font-text-letter);
+  grid-area: date;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  align-self: flex-end;
+}
+
+.notes {
+  color: var(--color-font-text-letter);
+  grid-area: notes;
+}
+
+.to {
+  color: var(--color-font-text-letter);
+  grid-area: to;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.text {
+  color: var(--color-font-title-letter);
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  max-width: 1612px;
+  word-wrap: break-word;
+}
